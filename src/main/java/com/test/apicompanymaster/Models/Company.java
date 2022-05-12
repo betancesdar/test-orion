@@ -1,4 +1,4 @@
-package com.test.apicompanymaster.Entities;
+package com.test.apicompanymaster.Models;
 
 import com.test.apicompanymaster.configurations.security.Constants;
 import lombok.*;

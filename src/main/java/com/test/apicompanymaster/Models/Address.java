@@ -1,27 +1,28 @@
-package com.test.apicompanymaster.Entities;
+package com.test.apicompanymaster.Models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.tomcat.jni.Address;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "address")
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToOne(fetch = FetchType.EAGER)
-    private Company company;
-    @OneToMany
-    private Address address;
+    private String idCountry;
+    private String idState;
+    private String idCity;
+    @ManyToOne(cascade = {CascadeType.ALL,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH})
+    private Customer customer;
 
 }

@@ -1,6 +1,6 @@
 package com.test.apicompanymaster.Services;
 
-import com.test.apicompanymaster.Entities.Customer;
+import com.test.apicompanymaster.Models.Customer;
 import com.test.apicompanymaster.Repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
